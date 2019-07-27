@@ -1,0 +1,71 @@
+// Do not override width
+// Only works with set width of 150px
+
+.button_advanced {
+  width: 150px;
+  height: 45px;
+  margin: 1em;
+  border: 3px solid black;
+  border-radius: 10px;
+  background: rgb(73,27,105);
+  background: linear-gradient(138deg, rgba(73,27,105,1) 0%, rgba(40,17,97,1) 17%, rgba(0,0,0,1) 100%);
+  user-select: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .button_shine {
+    transform: rotateZ(-70deg) translate(77px, 211px);
+  }
+
+  position: relative;
+  overflow: hidden;
+
+  &:active .button_flash {
+    opacity: 1;
+    transition: all 0s;
+  }
+
+  &:active .button_text {
+    color: black;
+    transition: all 0s;
+  }
+
+  .button_shine {
+    pointer-events: none;
+    transition: transform 0.35s linear;
+    height: 10px;
+    width: 90px;
+    background: white;
+    position: absolute;
+    top: 5px;
+    left: -85px;
+    transform: rotateZ(-70deg);
+    box-shadow: 0px 0px 20px 10px rgba(255,255,255,1);
+  }
+
+  .button_flash {
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 1s;
+    width: 105%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+  }
+
+  .button_text {
+    transition: color 1s;
+    color: white;
+    z-index: 999;
+
+  }
+  
+
+}
+

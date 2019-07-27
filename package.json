@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --progress --config webpack.prod.js",
-    "lint:js": "eslint src/ webpack.*.js --cache --fix"
+    "lint:js": "eslint src/ webpack.*.js --cache --fix",
+    "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}"
   },
   "keywords": [],
   "author": "",
@@ -37,7 +38,10 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "mithril": "^1.1.6"
+    "animate.css": "^3.7.2",
+    "mithril": "^1.1.6",
+    "prettier": "^1.18.2",
+    "prettier-webpack-plugin": "^1.2.0"
   },
   "browserslist": [
     "last 5 chrome versions"
