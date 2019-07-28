@@ -1,0 +1,45 @@
+$option-padding: 20px;
+$menu-height: 60px;
+
+.horizontal_menu {
+  height: $menu-height;
+  width: fit-content;
+  min-width: 100px;
+  background: #444;
+  border-radius: 10px;
+  position: relative;
+
+  .menu_options {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .menu_option {
+    user-select: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: $option-padding;
+    font-size: 18px;
+    &:hover {
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  .selected {
+    transition: all 0.33s;
+  }
+
+  .menu_indicator {
+    pointer-events: none;
+    position: absolute;
+    top: 6px;
+    height: $menu-height - 17px;
+    border: 2px solid;
+    border-radius: 10px;
+    transition: all 0.33s;
+  }
+}
