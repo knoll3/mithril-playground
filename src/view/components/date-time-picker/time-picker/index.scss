@@ -1,0 +1,27 @@
+.time-picker {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background: lightblue;
+}
+
+.time-picker__analogue-clock {
+  width: 100%;
+  height: 50%;
+  background: yellow;
+}
+
+.time-picker__text-clock {
+  margin-top: 50px;
+  width: 100%;
+  height: 10%;
+  background: red;
+}
+
+.time-picker__reset {
+  width: 100%;
+  height: 10%;
+  background: blue;
+}

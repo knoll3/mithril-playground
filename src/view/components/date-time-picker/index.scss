@@ -1,0 +1,21 @@
+.dt-selector {
+  height: 400px;
+  width: 500px;
+  display: flex;
+}
+
+.dt-selector__time-container {
+  height: 100%;
+  width: 40%;
+  background: lightgreen;
+  position: relative;
+}
+
+.dt-selector__date-container {
+  height: 100%;
+  width: 60%;
+  background: pink;
+  position: relative;
+}
+
+

@@ -1,0 +1,64 @@
+$height: 25px;
+$width: 60px;
+
+.toggle {
+  height: $height;
+  width: $width;
+  margin: 1em;
+  border-radius: $height;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  // &:active .toggle-background {
+  //   transform: translateX($width - $height);
+  // }
+
+  input {
+    display: none;
+    position: absolute;
+  }
+
+  label {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  input[type=checkbox]:checked ~ label ~.toggle-background {
+    transform: translateX($width - $height);
+  }
+}
+
+.toggle-background {
+  position: absolute;
+  top: -5px;
+  left: -($width - $height/2);
+  height: $height + 10px;
+  width: $width * 2;
+  transition: all 0.1s linear;
+  opacity: 0.5;
+
+  position: relative;
+  .on-side {
+    float: left;
+    height: 100%;
+    width: 50%;
+    background: green;
+  }
+  .off-side {
+    float: right;
+    height: 100%;
+    width: 50%;
+    background: white;
+  }
+  .knob {
+    position: absolute;
+    top: 5px;
+    left: (($width * 2) / 2) - $height / 2;
+    background: gray;
+    height: $height;
+    width: $height;
+    border-radius: $height;
+  }
+}

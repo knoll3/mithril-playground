@@ -5,9 +5,13 @@ $menu-height: 60px;
   height: $menu-height;
   width: fit-content;
   min-width: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
   background: #444;
-  border-radius: 10px;
+  border-radius: 30px;
   position: relative;
+  box-shadow: 0px 3px 15px 1px rgba(0,0,0,0.5);
+
 
   .menu_options {
     height: 100%;
@@ -22,6 +26,7 @@ $menu-height: 60px;
     user-select: none;
     color: rgba(255, 255, 255, 0.7);
     padding: $option-padding;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 18px;
     &:hover {
       cursor: pointer;

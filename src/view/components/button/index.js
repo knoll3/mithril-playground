@@ -1,5 +1,6 @@
 "use strict";
-import "./index.scss";
+import m from "mithril";
+import styles from "./index.scss";
 
 /*
  * A basic button

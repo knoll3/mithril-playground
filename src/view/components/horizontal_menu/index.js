@@ -21,8 +21,8 @@ const menuOption = {
 
 const transformIndicator = function(vnode, target) {
   const colorMap = vnode.state.colorMap;
-  const indicator = document.querySelector(".menu_indicator");
-  const menuOptions = document.querySelectorAll(".menu_option");
+  const indicator = vnode.dom.querySelector(".menu_indicator");
+  const menuOptions = vnode.dom.querySelectorAll(".menu_option");
 
   // clear all styles and selected class
   menuOptions.forEach(option => {
@@ -60,14 +60,14 @@ export default {
     ];
 
     // Add some random colors if there are not enough
-    const menuOptions = document.querySelectorAll(".menu_option");
+    const menuOptions = vnode.dom.querySelectorAll(".menu_option");
     while (menuOptions.length > vnode.state.colorMap.length) {
       const randomColor = `hsla(${~~(Math.random() * 255)}, 35%, 60%, 1)`;
       vnode.state.colorMap.push(randomColor);
     }
 
     // Set the indicator on the first option by default
-    const firstOption = document.querySelector(".menu_options").firstChild;
+    const firstOption = vnode.dom.querySelector(".menu_options").firstChild;
     transformIndicator(vnode, firstOption);
   },
 
